@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddemployeeComponent } from './addemployee/addemployee.component';
 
 import { DashboardComponent } from './components/adminlayout/admin/dashboard/dashboard.component';
 import { AdminlayoutComponent } from './components/adminlayout/adminlayout.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
       { path: '', component: DashboardComponent }],
 
   },
+  {path:"addemp", component:AddemployeeComponent},
   { path: 'signup', component: SignupComponent }
 ];
 
