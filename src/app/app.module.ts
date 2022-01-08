@@ -11,7 +11,9 @@ import { LoginComponent } from './login/login.component';
 import { ContructComponent } from './adminlayout/contruct/contruct.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { FjlskdjfComponent } from './fjlskdjf/fjlskdjf.component';
+import { AddemployeeComponent } from './addemployee/addemployee.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { HttpClientModule} from '@angular/common/http'
     DashboardComponent,
     LoginComponent,
     ContructComponent,
-    SignupComponent
+    SignupComponent,
+    FjlskdjfComponent,
+    AddemployeeComponent
   ],
   imports: [
     BrowserModule,
