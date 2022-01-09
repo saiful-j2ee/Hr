@@ -12,10 +12,10 @@ const routes: Routes = [
 
   {
     path: "admin", component: AdminlayoutComponent, children: [
-      { path: '', component: DashboardComponent }],
-
-  },
-  {path:"addemp", component:AddemployeeComponent},
+      { path: '', component: DashboardComponent },
+      {path:"addemp", component:AddemployeeComponent},
+    ]},
+  
   { path: 'signup', component: SignupComponent }
 ];
 

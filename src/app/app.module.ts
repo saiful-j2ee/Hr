@@ -13,7 +13,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { FjlskdjfComponent } from './fjlskdjf/fjlskdjf.component';
-import { AddemployeeComponent } from './addemployee/addemployee.component'
+import { AddemployeeComponent } from './addemployee/addemployee.component';
+import { ShowtableComponent } from './showtable/showtable.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AddemployeeComponent } from './addemployee/addemployee.component'
     ContructComponent,
     SignupComponent,
     FjlskdjfComponent,
-    AddemployeeComponent
+    AddemployeeComponent,
+    ShowtableComponent
   ],
   imports: [
     BrowserModule,
