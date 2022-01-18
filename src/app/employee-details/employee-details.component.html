@@ -1,0 +1,660 @@
+<html>
+
+<head>
+	<title>Online Job Application Form</title>
+	<style>
+		body {
+			font-family: "verdana", sans serif;
+			background-color: lightgreen;
+			margin: 0;
+
+		}
+
+		h2 {
+			background-color: forestgreen;
+			color: white;
+			padding: 10px;
+			text-align: center;
+		}
+
+		td {
+			padding: 7px;
+		}
+
+		input {
+			height: 30px;
+			border-radius: 10px;
+			border: none;
+
+		}
+
+		input:focus {
+			outline: none;
+			border: 1px solid forestgreen;
+		}
+
+		input:hover {
+			box-shadow: 5px 5px 5px black;
+		}
+
+		.button {
+			background-color: forestgreen;
+			color: #fff;
+			border: none;
+			padding: 7px
+		}
+
+		.button:hover {
+			cursor: pointer;
+			box-shadow: 5px 5px 5px red;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container ">
+
+		<h1 align="center">Online Job Applicatio Form</h1>
+		<form (ngSubmit)="save()">
+			<div id="personal-details">
+				<h2 align="center">Personal Deatils</h2>
+				<table width="100%">
+					<tr>
+						<td for="firstname">First Name</td>
+						<td>
+							<input type="text" name="firstname" id="firstname" placeholder="First Name" size="25" [(ngModel)]="employee.firstname">
+						</td>
+						<!-- <td>Middle Name</td>
+					<td>
+						<input type="text" size="25">
+					</td> -->
+						<td for="lastname">Last Name</td>
+						<td>
+							<input type="text" size="25" name="lastname" id="lastname" [(ngModel)]="employee.lastname">
+						</td>
+					</tr>
+					<tr>
+						<td for="fathername">Father's Name</td>
+						<td>
+							<input type="text" placeholder="Father's Name" size="25" id="fathername" name="fathername" [(ngModel)]="employee.fathername">
+						</td>
+						<td for="mothername">Mother's Name</td>
+						<td>
+							<input type="text" placeholder="Mother's Name" size="25" name="mothername" id="mothername" [(ngModel)]="employee.mothername">
+						</td>
+					</tr>
+					<tr>
+						<td for="dateofbirth">Date of Birth</td>
+						<td>
+							<input type="date" id="dateofbirth" name="dateofbirth" [(ngModel)]="employee.dateofbirth">
+						</td>
+						<td for="placeofbirth">Place of Birth</td>
+						<td>
+							<input type="text" placeholder="Place of Birth" name="placeofbirth" id="placeofbirth" size="25" [(ngModel)]="employee.placeofbirth">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" for="gender">Select Gender</td>
+						<td>
+							<input type="radio" name="gender" id="gender" value="male" [(ngModel)]="employee.gender">Male
+						</td>
+						<td>
+							<input type="radio" name="gender" id="gender" value="feale" [(ngModel)]="employee.gender">Female
+						</td>
+					</tr>
+					
+					<tr class="formGroup">
+						<td for="phone">Mobile Number</td>
+						<td>
+							<input type="number" class="formGroup" placeholder="+880" name="phone" id="phone" size="25" [(ngModel)]="employee.phone">
+						</td>
+						<td for="email">Email Id</td>
+						<td>
+							<input type="text" placeholder="your id@gmail.com" name="email" id="email" size="25" [(ngModel)]="employee.email">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" for="languageknown">Language Known</td>
+						<td>
+							<input type="checkbox" value="english" name="languageknown" id="languageknown" [(ngModel)]="employee.languageknown">English
+						</td>
+						<td>
+							<input type="checkbox" value="bengali" name="languageknown" id="languageknown" [(ngModel)]="employee.languageknown">Bengali
+						</td>
+						<td>
+							<input type="checkbox" value="hindi" name="languageknown" id="languageknown" [(ngModel)]="employee.languageknown" >Hindi
+						</td>
+					</tr>
+					<!-- <tr>
+						<td colspan="2" for="mothertongue">Your Mother Tongue</td>
+						<td>
+							<select name="mothertongue" id="mothertongue"[(ngModel)]="employee.mothertongue">
+								<option value="english">English</option>
+								<option value="bangali">Bengali</option>
+								<option value="hindi">Hindi</option>
+							</select>
+						</td>
+					</tr> -->
+					<tr>
+						<td for="nationalid">National Id No</td>
+						<td>
+							<input type="number" name="nationalid" id="nationalid" placeholder="National id Number" size="25" [(ngModel)]="employee.nationalid">
+						</td>
+						<td for="birthid">Birth Card Number</td>
+						<td>
+							<input type="number" name="birthid" id="birthid" placeholder="Birth Card Number" size="25" [(ngModel)]="employee.birthid">
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Address Details -->
+			<div id="address-details">
+				<h2>Address Details</h2>
+				<h3>A) Present Address</h3>
+				<table width="100%">
+
+					<tr>
+						<td for="nationality">Nationality</td>
+						<td>
+							<input type="radio" name="nationality" id="nationality" value="bangladesh" [(ngModel)]="employee.nationality">Bangladesh
+						</td>
+						<td>
+
+							<input type="radio" name="nationality"  id="nationality" value="other" [(ngModel)]="employee.nationality">Other
+
+						</td>
+					</tr>
+				
+					<tr>
+						<td for="devision">Devision</td>
+						<td>
+							<select name="devision" id="devision" [(ngModel)]="employee.devision">
+								<option value="Barishal">Barishal</option>
+								<option value="Chattogram">Chattogram </option>
+								<option value="Dhaka">Dhaka</option>
+								<option value="Khulna">Khulna</option>
+								<option value="Rajshahi">Rajshahi</option>
+								<option value="Rangpur">Rangpur</option>
+								<option value="Mymensingh">Mymensingh</option>
+								<option value="Sylhet">Sylhet.</option>
+
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td for="district">District</td>
+						<td>
+							<select id="district" name="district" [(ngModel)]="employee.district">
+								<option value="Kishoreganj District">Kishoreganj District</option>
+								<option value="Gopalganj District">Gopalganj District</option>
+								<option value="Gazipur District">Gazipur District</option>
+								<option value="Faridpur District">Faridpur District</option>
+								<option value="Dhaka District">Dhaka District</option>
+								<option value="Narsingdi District">Narsingdi District</option>
+								<option value="Narayanganj District">Narayanganj District</option>
+
+								<option value="Manikganj District">Manikganj District</option>
+								<option value="Munshiganj District">Munshiganj District</option>
+								<option value="Madaripur District">Madaripur District</option>
+								<option value="Kurigram District">Kurigram District</option>
+								<option value="Thakurgaon District">Thakurgaon District</option>
+								<option value="Sherpur District">Sherpur District</option>
+								<option value="Mymensingh District">Mymensingh District</option>
+								<option value="Netrokona District">Netrokona District</option>
+								<option value="Lalmonirhat District">Lalmonirhat District</option>
+								<option value="Nilphamari District">Nilphamari District</option>
+								<option value="Panchagarh District">Panchagarh District</option>
+								<option value="Rangpur District">Rangpur District</option>
+								<option value="Gaibandha District">Gaibandha District</option>
+								<option value="Dinajpur District">Dinajpur District</option>
+								<option value="Pabna District">Pabna District</option>
+								<option value="Rajshahi District">Rajshahi District</option>
+								<option value="Sirajganj District">Sirajganj District</option>
+								<option value="Bogura District">Bogura District</option>
+								<option value="Naogaon District">Naogaon District</option>
+								<option value="Joypurhat District">Joypurhat District</option>
+								<option value="Natore District">Natore District</option>
+								<option value="Chapainawabganj District">Chapainawabganj District</option>
+								<option value="Kushtia District">Kushtia District</option>
+								<option value="Magura District">Magura District</option>
+								<option value="Meherpur District">Meherpur District</option>
+								<option value="Narail District">Narail District</option>
+								<option value="Satkhira District">Satkhira District</option>
+								<option value="Bagerhat District">Bagerhat District</option>
+								<option value="Chuadanga District">Chuadanga District</option>
+								<option value="Jashore District">Jashore District</option>
+								<option value="Jhenaidah District">Jhenaidah District</option>
+								<option value="Khulna District">Khulna District</option>
+								<option value="Habiganj District">Habiganj District</option>
+								<option value="Moulvibazar District">Moulvibazar District</option>
+								<option value="Sunamganj District">Sunamganj District</option>
+								<option value="Sylhet District">Sylhet District</option>
+								<option value="Pirojpur District">Pirojpur District</option>
+								<option value="Barguna District">Barguna District</option>
+								<option value="Barishal District">Barishal District</option>
+								<option value="Bhola District">Bhola District</option>
+								<option value="Jhalokati District">Jhalokati District</option>
+								<option value="Patuakhali District">Patuakhali District</option>
+								<option value="Rangamati District">Rangamati District</option>
+								<option value="Cox’s Bazar District">Cox’s Bazar District</option>
+								<option value="Feni District">Feni District</option>
+								<option value="Khagrachhari District">Khagrachhari District</option>
+								<option value="Khagrachhari District">Khagrachhari District</option>
+								<option value="Lakshmipur District">Lakshmipur District</option>
+								<option value="Noakhali District">Noakhali District</option>
+								<option value="Bandarban District">Bandarban District</option>
+								<option value="Brahmanbaria District">Brahmanbaria District</option>
+								<option value="Chandpur District">Chandpur District</option>
+								<option value="Chattogram District">Chattogram District</option>
+								<option value="Cumilla District">Cumilla District</option>
+								<option value="Tangail District">Tangail District</option>
+								<option value="Shariatpur District">Shariatpur District</option>
+								<option value="Rajbari District">Rajbari District</option>
+								<option value="Jamalpur District">Jamalpur District</option>
+
+							</select>
+
+						</td>
+					</tr>
+					<tr>
+						<td for="pl">Police Station</td>
+						<td>
+							<input type="text" size="25" name="police" id="police"[(ngModel)]="employee.police">
+						</td>
+					</tr>
+					<tr>
+						
+						<td for="vill">Vill / Para / House No / Road:</td>
+						<td>
+							<input type="text" size="25" name="vill" id="vill" [(ngModel)]="employee.vill">
+						</td>
+					</tr>
+					<tr>
+						<td for="postoffice">Post Office</td>
+						<td>
+							<input type="text" size="25" name="postoffice" id="postoffice" [(ngModel)]="employee.postoffice">
+						</td>
+						<td for="pcode">Pin Code</td>
+						<td>
+							<input type="phone" size="25" name="pcode" id="pcode" [(ngModel)]="employee.pcode">
+						</td>
+					</tr>
+				</table>
+				<br><br>
+			</div>
+
+			<div>
+				<h3>B) Parmanent Address</h3>
+				<table width="100%">
+
+					<tr>
+						<td colspan="2">Same as Present Address</td>
+						<td>
+							<input type="radio" name="Address" value="yes">Yes
+						</td>
+						<td>
+							<input type="radio" name="Address" value="no">No
+						</td>
+					</tr>
+					<tr>
+						<td>Nationality</td>
+						<td>
+							<input type="radio" name="gender" value="bangladesh">Bangladesh
+						</td>
+						<td>
+							<input type="radio" name="gender" value="other">Other
+						</td>
+					</tr>
+					<!-- <tr>
+						<td>State</td>
+						<td>
+							<input type="text" size="25">
+						</td>
+					</tr> -->
+					<tr>
+						<td>Devision</td>
+						<td>
+							<select>
+								<option value="Barishal">Barishal</option>
+								<option value="Chattogram ">Chattogram </option>
+								<option value="Dhaka">Dhaka</option>
+								<option value="Khulna">Khulna</option>
+								<option value="Rajshahi">Rajshahi</option>
+								<option value="Rangpur">Rangpur</option>
+								<option value="Mymensingh">Mymensingh</option>
+								<option value="Sylhet">Sylhet.</option>
+								
+								
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>District</td>
+						<td>
+							<select>
+								<option value="Kishoreganj District">Kishoreganj District</option>
+								<option value="Gopalganj District">Gopalganj District</option>
+								<option value="Gazipur District">Gazipur District</option>
+								<option value="Faridpur District">Faridpur District</option>
+								<option value="Dhaka District">Dhaka District</option>
+								<option value="Narsingdi District">Narsingdi District</option>
+								<option value="Narayanganj District">Narayanganj District</option>
+
+								<option value="Manikganj District">Manikganj District</option>
+								<option value="Munshiganj District">Munshiganj District</option>
+								<option value="Madaripur District">Madaripur District</option>
+								<option value="Kurigram District">Kurigram District</option>
+								<option value="Thakurgaon District">Thakurgaon District</option>
+								<option value="Sherpur District">Sherpur District</option>
+								<option value="Mymensingh District">Mymensingh District</option>
+								<option value="Netrokona District">Netrokona District</option>
+								<option value="Lalmonirhat District">Lalmonirhat District</option>
+								<option value="Nilphamari District">Nilphamari District</option>
+								<option value="Panchagarh District">Panchagarh District</option>
+								<option value="Rangpur District">Rangpur District</option>
+								<option value="Gaibandha District">Gaibandha District</option>
+								<option value="Dinajpur District">Dinajpur District</option>
+								<option value="Pabna District">Pabna District</option>
+								<option value="Rajshahi District">Rajshahi District</option>
+								<option value="Sirajganj District">Sirajganj District</option>
+								<option value="Bogura District">Bogura District</option>
+								<option value="Naogaon District">Naogaon District</option>
+								<option value="Joypurhat District">Joypurhat District</option>
+								<option value="Natore District">Natore District</option>
+								<option value="Chapainawabganj District">Chapainawabganj District</option>
+								<option value="Kushtia District">Kushtia District</option>
+								<option value="Magura District">Magura District</option>
+								<option value="Meherpur District">Meherpur District</option>
+								<option value="Narail District">Narail District</option>
+								<option value="Satkhira District">Satkhira District</option>
+								<option value="Bagerhat District">Bagerhat District</option>
+								<option value="Chuadanga District">Chuadanga District</option>
+								<option value="Jashore District">Jashore District</option>
+								<option value="Jhenaidah District">Jhenaidah District</option>
+								<option value="Khulna District">Khulna District</option>
+								<option value="Habiganj District">Habiganj District</option>
+								<option value="Moulvibazar District">Moulvibazar District</option>
+								<option value="Sunamganj District">Sunamganj District</option>
+								<option value="Sylhet District">Sylhet District</option>
+								<option value="Pirojpur District">Pirojpur District</option>
+								<option value="Barguna District">Barguna District</option>
+								<option value="Barishal District">Barishal District</option>
+								<option value="Bhola District">Bhola District</option>
+								<option value="Jhalokati District">Jhalokati District</option>
+								<option value="Patuakhali District">Patuakhali District</option>
+								<option value="Rangamati District">Rangamati District</option>
+								<option value="Cox’s Bazar District">Cox’s Bazar District</option>
+								<option value="Feni District">Feni District</option>
+								<option value="Khagrachhari District">Khagrachhari District</option>
+								<option value="Khagrachhari District">Khagrachhari District</option>
+								<option value="Lakshmipur District">Lakshmipur District</option>
+								<option value="Noakhali District">Noakhali District</option>
+								<option value="Bandarban District">Bandarban District</option>
+								<option value="Brahmanbaria District">Brahmanbaria District</option>
+								<option value="Chandpur District">Chandpur District</option>
+								<option value="Chattogram District">Chattogram District</option>
+								<option value="Cumilla District">Cumilla District</option>
+								<option value="Tangail District">Tangail District</option>
+								<option value="Shariatpur District">Shariatpur District</option>
+								<option value="Rajbari District">Rajbari District</option>
+								<option value="Jamalpur District">Jamalpur District</option>
+
+							</select>
+
+						</td>
+					</tr>
+					
+					<tr>
+						<td>Police Station</td>
+						<td>
+							<input type="text" size="25">
+						</td>
+					</tr>
+					<tr>
+						<!-- <td>Ward GP</td>
+						<td>
+							<input type="text" size="25">
+						</td> -->
+						<td>Vill / Para / House No / Road:</td>
+						<td>
+							<input type="text" size="25">
+						</td>
+					</tr>
+					<tr>
+						<td>Post Office</td>
+						<td>
+							<input type="text" size="25">
+						</td>
+						<td>Pin Code</td>
+						<td>
+							<input type="number" size="25">
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Educational Qualification -->
+			<div id="educational-qualification">
+				<h2> Educational Qualification</h2>
+				<table width="100%">
+					<tr>
+						<td>Sl</td>
+						<td for="qualification">Qualification</td>
+						<td for="instituited">Instituited / University</td>
+						<td for="pass">Year of Passing</td>
+						<td for="mark">Marks (%)</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>
+							<input type="text" size="25" name="qulafication" id="qulafication" [(ngModel)]="employee.qualification">
+						</td>
+						<td>
+							<input type="text" size="25" name="instituited" id="instituited" [(ngModel)]="employee.instituited">
+						</td>
+						<td>
+							<input type="text" size="25" name="pass" id="pass" [(ngModel)]="employee.pass">
+						</td>
+						<td>
+							<input type="text" size="25" name="mark" id="mark" [(ngModel)]="employee.mark">
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>
+							<input type="text" size="25" name="qualification" id="qualification" [(ngModel)]="employee.qualification">
+						</td>
+						<td>
+							<input type="text" size="25" name="instituited" id="instituited" [(ngModel)]="employee.instituited">
+						</td>
+						<td>
+							<input type="text" size="25" name="pass" id="pass" [(ngModel)]="employee.pass">
+
+						</td>
+						<td>
+							<input type="text" size="25" name="mark" id="mark" [(ngModel)]="employee.mark">
+
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>
+							<input type="text" size="25" name="qualification" id="qualification" [(ngModel)]="employee.qualification">
+						</td>
+						<td>
+							<input type="text" size="25" name="instituited" id="instituited" [(ngModel)]="employee.instituited">
+						</td>
+						<td>
+							<input type="text" size="25" name="pass" id="pass" [(ngModel)]="employee.pass">
+						</td>
+						<td>
+							<input type="text" size="25" name="mark" id="mark" [(ngModel)]="employee.mark">
+						</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>
+							<input type="text" size="25" name="qualification" id="qualification" [(ngModel)]="employee.qualification">
+						</td>
+						<td>
+							<input type="text" size="25" name="instituited" id="instituited" [(ngModel)]="employee.instituited">
+						</td>
+						<td>
+							<input type="text" size="25" name="pass" id="pass" [(ngModel)]="employee.pass">
+						</td>
+						<td>
+							<input type="text" size="25" name="mark" id="mark" [(ngModel)]="employee.mark">
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Work Experience -->
+			<div id="work-experience">
+				<h2>Work Experience</h2>
+				<table width="100%">
+					<tr>
+						<td>Sl No</td>
+						<td for="comaddress ">Company Address</td>
+						<td for="work">Work / Role</td>
+						<td for="duration">Duration (form - to)</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>
+							<input type="text" size="25" name="comaddress " id="comaddress" [(ngModel)]="employee.comaddress">
+						</td>
+						<td>
+							<input type="text" size="25" name="work" id="work" [(ngModel)]="employee.work">
+						</td>
+						<td>
+							<input type="date" size="25" name="duration" id="duration" [(ngModel)]="employee.duration">
+						</td>
+						<td>
+							<input type="date" size="25" name="enddutation" id="enddutation" [(ngModel)]="employee.enddutation">
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>
+							<input type="text" size="25" name="comaddress " id="comaddress" [(ngModel)]="employee.comaddress">
+						</td>
+						<td>
+							<input type="text" size="25" name="work" id="work" [(ngModel)]="employee.work">
+						</td>
+						<td>
+							<input type="date" size="25" name="duration" id="duration" [(ngModel)]="employee.duration">
+						</td>
+						<td>
+							<input type="date" size="25" name="enddutation" id="enddutation" [(ngModel)]="employee.enddutation">
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>
+							<input type="text" size="25" name="comaddress " id="comaddress" [(ngModel)]="employee.comaddress">
+						</td>
+						<td>
+							<input type="text" size="25" name="work" id="work" [(ngModel)]="employee.work">
+						</td>
+						<td>
+							<input type="date" size="25" name="duration" id="duration" [(ngModel)]="employee.duration">
+						</td>
+						<td>
+							<input type="date" size="25" name="enddutation" id="enddutation" [(ngModel)]="employee.enddutation">
+						</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>
+							<input type="text" size="25" name="comaddress " id="comaddress" [(ngModel)]="employee.comaddress">
+						</td>
+						<td>
+							<input type="text" size="25" name="work" id="work" [(ngModel)]="employee.work">
+						</td>
+						<td>
+							<input type="date" size="25" name="duration" id="duration" [(ngModel)]="employee.duration">
+						</td>
+						<td>
+							<input type="date" size="25" name="enddutation" id="enddutation" [(ngModel)]="employee.enddutation">
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Other Details -->
+			<div id="other-details">
+				<h2>Other Details</h2>
+				<table width="100%">
+					<tr>
+						<td for="jobtype">Job Type</td>
+						<td>
+							<input type="radio" name="jobtype" id="jobtype" [(ngModel)]="employee.jobtype" value="permanent">Permanent
+						</td>
+						<td>
+							<input type="radio" name="jobtype" id="jobtype" value="contrect" [(ngModel)]="employee.jobtype">Contrect
+						</td>
+						<td>
+							<input type="radio" name="jobtype" id="jobtype" value="other" [(ngModel)]="employee.jobtype">Other
+						</td>
+					</tr>
+					<tr>
+						<td for="joindate">Date Of Joining</td>
+						<td>
+							<input type="date" name="joindate" id="joindate" [(ngModel)]="employee.joindate">
+						</td>
+						<td>Date Of Joining</td>
+						<td>
+							<input type="date">
+						</td>
+					<tr>
+						<td for="joblocation">Preferred Job Location</td>
+						<td>
+							<input type="radio" name="joblocation" value="dhaka" [(ngModel)]="employee.joblocation">Dhaka
+						</td>
+						<td>
+							<input type="radio" name="joblocation" value="chittagone" [(ngModel)]="employee.joblocation">Chittagone
+						</td>
+						<td>
+							<input type="radio" name="joblocation" value="other" [(ngModel)]="employee.joblocation">Other
+						</td>
+					</tr>
+					<!-- <tr>
+						<td colspan="1">Willing to relocate to Hydarabad</td>
+						<td>
+							<input type="radio" name="Hydarabad" value="yes">Yes
+						</td>
+						<td>
+							<input type="radio" name="Hydarabad" value="no">NO
+						</td>
+					</tr> -->
+
+					<tr>
+						<td></td>
+						<td>
+							<input type="checkbox">
+						</td>
+						<td colspan="2">All the above mentioned information is true as per my knowledge.
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<button type="submit" value="Submit" >Submit</button>
+						</td>
+						<td>
+							<button type="reset" value="Reset" >Reset</button>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+	<!-- Main Footer -->
+
+	<h3>BengalStudent.in </h3>
+	<p>Thank you</p>
+
+</body>
+
+</html>

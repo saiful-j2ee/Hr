@@ -12,9 +12,11 @@ import { ContructComponent } from './adminlayout/contruct/contruct.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
-import { FjlskdjfComponent } from './fjlskdjf/fjlskdjf.component';
+
 import { AddemployeeComponent } from './addemployee/addemployee.component';
-import { ShowtableComponent } from './showtable/showtable.component'
+import { ShowtableComponent } from './showtable/showtable.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { EmployeeDetailTableComponent } from './employee-detail-table/employee-detail-table.component'
 
 @NgModule({
   declarations: [
@@ -26,9 +28,11 @@ import { ShowtableComponent } from './showtable/showtable.component'
     LoginComponent,
     ContructComponent,
     SignupComponent,
-    FjlskdjfComponent,
+
     AddemployeeComponent,
-    ShowtableComponent
+    ShowtableComponent,
+    EmployeeDetailsComponent,
+    EmployeeDetailTableComponent
   ],
   imports: [
     BrowserModule,

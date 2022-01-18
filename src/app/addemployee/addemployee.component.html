@@ -1,184 +1,209 @@
 <div class="content-wrapper container " style="width: 1000px; ">
-<section class="h-100 h-custom gradient-custom-2">
+  <section class="h-100 h-custom gradient-custom-2">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12">
           <div class="card card-registration card-registration-2" style="border-radius: 15px;">
             <div class="card-body p-0">
-                <form (ngSubmit)="save()">
-              <div class="row g-0 ">
-              
+              <form (ngSubmit)="save()">
 
-                <div class="col-lg-6 bg-green">
-                  <div class="p-5">
-                    <h3 class="fw-normal mb-5 text-white" style="color: #4835d4;">General Infomation</h3>
-                    <label for="designation">Designation :</label>
-                    <div class="mb-4 pb-2">
-                        
-                      <select class="select" name="designation" id="designation" [(ngModel)]="ep.designation"> 
-                        <option value="1">Title</option>
-                        <option value="General Manager">General Manager</option>
-                        <option value="Manager">Manager</option>
-                        <option value="Employee">Employee</option>
-                      </select>
-                    </div>
-  
-                    <div class="row">
-                      <div class="col-md-6 mb-4 pb-2">
-  
-                        <div class="form-outline">
-                          
-                          <label class="form-label" for="fname">First name</label>
-                          <input type="text" id="fname" name="fname" [(ngModel)]="ep.fname" class="form-control form-control-lg" />
-                        </div>
-  
+                <div class="row g-0 ">
+
+                  <div class="col-lg-6 bg-white">
+                    <div class="p-5">
+                  <h3 class="fw-normal mb-5 " style="color: #4835d4;">General Infomation</h3>
+                    
+                      <label for="designation">Designation :</label>
+                      <div class="mb-4 pb-2">
+
+                        <select class="select" name="designation" id="designation" [(ngModel)]="ep.designation">
+                          <option value="-1">Title</option>
+                          <option value="General_Manager">General Manager</option>
+                          <option value="Manager">Manager</option>
+                          <option value="Employee">Employee</option>
+                        </select>
                       </div>
-                      <div class="col-md-6 mb-4 pb-2">
-  
-                        <div class="form-outline">
-                          
-                          <label class="form-label" for="lname">Last name</label>
-                          <input type="text" id="lname" name="lname" class="form-control form-control-lg" />
+
+                      <div class="row">
+                        <div class="col-md-6 mb-4 pb-2">
+
+                          <div class="form-outline">
+
+                            <label class="form-label" for="fname">First name</label>
+                            <input type="text" id="fname" name="fname" [(ngModel)]="ep.fname"
+                              class="form-control form-control-lg" />
+                          </div>
+
                         </div>
-  
+                        <div class="col-md-6 mb-4 pb-2">
+
+                          <div class="form-outline">
+
+                            <label class="form-label" for="lname">Last name</label>
+                            <input type="text" id="lname" name="lname" [(ngModel)]="ep.lname"
+                              class="form-control form-control-lg" />
+                          </div>
+
+                        </div>
                       </div>
-                    </div>
-  
-                    <div class="mb-4 pb-2">
+
+                      <div class="mb-4 pb-2">
                         <label for="department">Department :</label>
-                      <select class="col-md-4" name="department" id="department" [(ngModel)]="ep.department">
-                        <option value="1">Department</option>
-                        <option value="Production">Production</option>
-                        <option value="Finishing">Finishing</option>
-                        <option value="Admin">Admin</option>
-                      </select>
-                    </div>
-  
-                    <div class="mb-4 pb-2">
-                      <div class="form-outline">
-                        <label class="form-label" for="position">Position</label>
-                        <input type="text" id="position" name="position" [(ngModel)]="ep.position" class="form-control form-control-lg" />
-                        
+                        <select class="col-md-4" name="department" id="department" [(ngModel)]="ep.department">
+                          <option value="1">Department</option>
+                          <option value="Production">Production</option>
+                          <option value="Finishing">Finishing</option>
+                          <option value="Admin">Admin</option>
+                        </select>
                       </div>
-                    </div>
-  
-                    <div class="row">
-                      <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-  
+
+                      <div class="mb-4 pb-2">
                         <div class="form-outline">
-                         
-                          <label class="form-label" for="area">Bussines Area</label>
-                          <input type="text" id="area" name="area" [(ngModel)]="ep.area" class="form-control form-control-lg" />
-                        </div>
-  
-                      </div>
-                      <div class="col-md-8 mt-4">
-                        <label for="gender">Gender :</label>
-                        <div>
-                            <input type="radio" name="gender" id="gender" [(ngModel)]="ep.gender" value="male" class=" col-md-2">Male
-                            <input type="radio" name="gender" id="gender" [(ngModel)]="ep.gender" value="female"class="col-md-2">Female
-                            <input type="radio" name="gender" id="gender" [(ngModel)]="ep.gender" value="female"class="col-md-2">Others
-                        
+                          <label class="form-label" for="position">Position</label>
+                          <input type="text" id="position" name="position" [(ngModel)]="ep.position"
+                            class="form-control form-control-lg" />
+
                         </div>
                       </div>
+
+                      <div class="row">
+                        <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+
+                          <div class="form-outline">
+
+                            <label class="form-label" for="area">Bussines Area</label>
+                            <input type="text" id="area" name="area" [(ngModel)]="ep.area"
+                              class="form-control form-control-lg" />
+                          </div>
+
+                        </div>
+                        <div class="col-md-8 mt-4">
+                          <label for="gender">Gender :</label>
+                          <div>
+                            <input type="radio" name="gender" id="gender" [(ngModel)]="ep.gender" value="male"
+                              class=" col-md-2">Male
+                            <input type="radio" name="gender" id="gender" [(ngModel)]="ep.gender" value="female"
+                              class="col-md-2">Female
+                            <input type="radio" name="gender" id="gender" [(ngModel)]="ep.gender" value="female"
+                              class="col-md-1">Others
+
+                          </div>
+                        </div>
+                        <div class="mb-4 pb-2">
+                          <div class="form-outline">
+                            <label class="form-label" for="dob">Date date_of_birth</label>
+                            <input type="date" id="dob" name="dob" [(ngModel)]="ep.dob"
+                              class="form-control form-control-lg" />
+
+                          </div>
+                        </div>
+                      </div>
+
                     </div>
-  
                   </div>
-                </div>
-                <div class="col-lg-6 bg-indigo text-white">
-                  <div class="p-5">
-                    <h3 class="fw-normal mb-5">Contact Details</h3>
-  
-                    <div class="mb-4 pb-2">
-                      <div class="form-outline form-white">
-                        <label class="form-label" for="paddress">Preasent Address</label>
-                        <input type="text" id="paddress" name="paddress" [(ngModel)]="ep.paddress" class="form-control form-control-lg" />
-                        
-                      </div>
-                    </div>
-  
-                    <div class="mb-4 pb-2">
-                      <div class="form-outline form-white">
-                        <label class="form-label" for="praddress">Parmanent Address</label>
-                        <input type="text" id="praddress" name="praddress" class="form-control form-control-lg" />
-                        
-                      </div>
-                    </div>
-  
-                    <div class="row">
-                      <div class="col-md-5 mb-4 pb-2">
-  
+                  <div class="col-lg-6 bg-indigo text-white">
+                    <div class="p-5">
+                      <h3 class="fw-normal mb-5">Contact Details</h3>
+
+                      <div class="mb-4 pb-2">
                         <div class="form-outline form-white">
+                          <label class="form-label" for="paddress">Preasent Address</label>
+                          <input type="text" id="paddress" name="paddress" [(ngModel)]="ep.paddress"
+                            class="form-control form-control-lg" />
+
+                        </div>
+                      </div>
+
+                      <div class="mb-4 pb-2">
+                        <div class="form-outline form-white">
+                          <label class="form-label" for="praddress">Parmanent Address</label>
+                          <input type="text" id="praddress" [(ngModel)]="ep.praddress" name="praddress"
+                            class="form-control form-control-lg" />
+
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-5 mb-4 pb-2">
+
+                          <div class="form-outline form-white">
                             <label class="form-label" for="pcode">Post Code</label>
-                          <input type="number" id="pcode" name="pcode" [(ngModel)]="ep.pcode" class="form-control form-control-lg" />
-                          
+                            <input type="number" id="pcode" name="pcode" [(ngModel)]="ep.pcode"
+                              class="form-control form-control-lg" />
+
+                          </div>
+
                         </div>
-  
-                      </div>
-                      <div class="col-md-7 mb-4 pb-2">
-  
-                        <div class="form-outline form-white">
+                        <div class="col-md-7 mb-4 pb-2">
+
+                          <div class="form-outline form-white">
                             <label class="form-label" for="place">Place</label>
-                          <input type="text" id="place" name="place" [(ngModel)]="ep.place" class="form-control form-control-lg" />
-                          
+                            <input type="text" id="place" name="place" [(ngModel)]="ep.place"
+                              class="form-control form-control-lg" />
+
+                          </div>
+
                         </div>
-  
                       </div>
-                    </div>
-  
-                    <div class="mb-4 pb-2">
-                      <div class="form-outline form-white">
-                        <label class="form-label" for="country">Country</label>
-                        <input type="text" id="country" name="country" [(ngModel)]="ep.country" class="form-control form-control-lg" />
-                        
-                      </div>
-                    </div>
-  
-                    <div class="row">
-                     
-                      <div class="col-md-7 mb-4 pb-2">
-  
+
+                      <div class="mb-4 pb-2">
                         <div class="form-outline form-white">
-                        <label class="form-label" for="phone">Phone Number</label>
-                          <input type="text" id="phone" name="phone" [(ngModel)]="ep.phone" class="form-control form-control-lg" />
-                          
+                          <label class="form-label" for="country">Country</label>
+                          <input type="text" id="country" name="country" [(ngModel)]="ep.country"
+                            class="form-control form-control-lg" />
+
                         </div>
-  
                       </div>
-                    </div>
-  
-                    <div class="mb-4">
-                      <div class="form-outline form-white">
-                        <label class="form-label" for="email">Your Email</label>
-                        <input type="text" id="email" name="email" [(ngModel)]="ep.email" class="form-control form-control-lg" />
+
+                      <div class="row">
+
+                        <div class="col-md-7 mb-4 pb-2">
+
+                          <div class="form-outline form-white">
+                            <label class="form-label" for="phone">Phone Number</label>
+                            <input type="text" id="phone" name="phone" [(ngModel)]="ep.phone"
+                              class="form-control form-control-lg" />
+
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="mb-4">
                         
-                      </div>
+                          <label class="form-label" for="email">Your Email</label>
+                          <div class="form-outline form-white">
+                          <input type="text" id="email" name="email" [(ngModel)]="ep.email"
+                            class="form-control form-control-lg" />
+                          </div>
+                          <div *ngIf="submitted && f['email'].errors">
+                            <div class="error text-danger">
+                                Email is mandatory.
+                            </div>
+                        </div>
+                        
+
                     </div>
-  
+
                     <div class="form-check d-flex justify-content-start mb-4 pb-3">
-                      <input
-                        class="form-check-input me-3"
-                        type="checkbox"
-                        value=""
-                        id="form2Example3c"
-                      />
+                      <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
                       <label class="form-check-label text-white" for="form2Example3">
                         I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your site.
                       </label>
                     </div>
-  
+
                     <button type="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Register</button>
-  
+
                   </div>
                 </div>
-                
-              </div>
-            </form>
+
             </div>
-        
+            </form>
           </div>
+
         </div>
       </div>
     </div>
-  </section>
+</div>
+</section>
 </div>

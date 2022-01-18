@@ -7,6 +7,7 @@ export class Addemployee{
     position:string="";
     area:string="";
     gender:String="";
+    dob:String="";
     paddress:String="";
     praddress:String="";
     pcode:number=0;

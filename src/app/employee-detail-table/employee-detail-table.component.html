@@ -142,10 +142,10 @@ $(document).ready(function(){
     <div class="container-lg">
         <div class="table-responsive">
             <div class="table-wrapper">			
-               <div class="table-title">
+                <div class="table-title">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h2>Employee <b>Information</b></h2>
+                            <h2>Employee <b>Details</b></h2>
                         </div>
                         <div class="col-sm-6">
                             <div class="search-box">
@@ -157,37 +157,82 @@ $(document).ready(function(){
                         </div>
                     </div>
                 </div>
-                <table class="table  table-bordered border-primary table-sm" style="background-color: white;   height:auto ;width: 1050px;">
+                <table class="table  table-bordered border-primary table-sm" style="background-color: white; width: auto;   height:auto ;">
                     <thead class="thead" >
                       <tr>
                         <th>Id</th>
-                        <th>Designation</th>
                         <th>Firstname</th>
                         <th>Lastname</th>
-                        <th>Department</th>
-                        <th>Position</th>
-                        <th>Work_Area</th>
+                        <th>father_name</th>
+                        <th>mother_name</th>
+                        <th>Date_of_Birth</th>
+                        <th>Birth_palce</th>
                         <th>Gender</th>
-                        <th>Birth Date</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <th>Language_known</th>
+                        <th>NId-No</th>
+                        <th>Birth-Id</th>
+                        <th>Nationalaty</th>
+                        <th>Devision</th>
+                        <th>District</th>
+                        <th>police_Station</th>
+                        <th>Village</th>
+                        <th>Post_Office</th>
+                        <th>Post_code</th>
+                        <th>Qulification</th>
+                        <th>instituted</th>
+                        <th>passing_year</th>
+                        <th>marks</th>
+                        <th>Company_address</th>
+                        <th>Work</th>
+                        <th>Starting_date</th>
+                        <th>Ending_date</th>
+                        <th>Job_Type</th>
+                        <th>Job_location</th>
+                       
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor="let emp of employees; index as i;">
+                      <tr *ngFor="let emp of Employees; index as i;">
                         <td>{{emp.id}}</td>
-                        <td>{{emp.designation}}</td>
-                        <td>{{emp.fname}}</td>
-                        <td>{{emp.lname}}</td>
-                        <td>{{emp.department}}</td>
-                        <td>{{emp.position}}</td>
-                        <td>{{emp.area}}</td>
+                        
+                        <td>{{emp.firstname}}</td>
+                        <td>{{emp.lastname}}</td>
+                        <td>{{emp.fathername}}</td>
+                        <td>{{emp.mothername}}</td>
+                        <td>{{emp.dateofbirth}}</td>
+                        <td>{{emp.placeofbirth}}</td>
+                        <td>{{emp.phone}}</td>
+                        <td>{{emp.email}}</td>
                         <td>{{emp.gender}}</td>
-                        <td>{{emp.dob}}</td>
+                        <td>{{emp.languageknown}}</td>
+                        <td>{{emp.nationalid}}</td>
+                        <td>{{emp.birthid}}</td>
+                        <td>{{emp.nationality}}</td>
+                        <td>{{emp.devision}}</td>
+                        <td>{{emp.district}}</td>
+                        <td>{{emp.police}}</td>
+                        <td>{{emp.vill}}</td>
+                        <td>{{emp.postoffice}}</td>
+                        <td>{{emp.pcode}}</td>
+                        <td>{{emp.qualification}}</td>
+                        <td>{{emp.instituited}}</td>
+                        <td>{{emp.pass}}</td>
+                        <td>{{emp.mark}}</td>
+                        <td>{{emp.comaddress}}</td>
+                        <td>{{emp.work}}</td>
+                        <td>{{emp.duration}}</td>
+                        <td>{{emp.enddutation}}</td>
+                        <td>{{emp.jobtype}}</td>
+                        <td>{{emp.joblocation}}</td>
                         
                         <td>
-                          <button class="btn btn-primary" (click)="editEmployee(emp)" >Edit</button>
-                          <button class="btn btn-danger" (click)="deleteEmployee(emp)">Delete</button>
-                        </td>
+                            <button class="btn btn-primary" (click)="editEmployee(emp)" >Edit</button>
+                            <button class="btn btn-danger" (click)="deleteEmployee(emp)">Delete</button>
+                          </td>
+                   
                       </tr>
                     </tbody>
             
