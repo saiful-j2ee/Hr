@@ -16,7 +16,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
 import { ShowtableComponent } from './showtable/showtable.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
-import { EmployeeDetailTableComponent } from './employee-detail-table/employee-detail-table.component'
+import { EmployeeDetailTableComponent } from './employee-detail-table/employee-detail-table.component';
+import { EmployeeAttendanceComponent } from './employee-attendance/employee-attendance.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { EmployeeDetailTableComponent } from './employee-detail-table/employee-d
     AddemployeeComponent,
     ShowtableComponent,
     EmployeeDetailsComponent,
-    EmployeeDetailTableComponent
+    EmployeeDetailTableComponent,
+    EmployeeAttendanceComponent
   ],
   imports: [
     BrowserModule,

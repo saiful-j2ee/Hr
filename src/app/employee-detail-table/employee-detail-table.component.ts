@@ -10,12 +10,16 @@ import { Employee_detail } from './employees.model';
   styleUrls: ['./employee-detail-table.component.css']
 })
 export class EmployeeDetailTableComponent implements OnInit {
-  Employees: any
- emoloyees= new Employee_detail()
+
+ employee :Employee_detail= new Employee_detail()
 
   constructor( private http: HttpClient,private router:Router) {
     this.showTable()
    }
+   
+  employees: any;
+  isShowTable: boolean = false;
+  isSave: boolean = true;
 
   ngOnInit(): void {
  
@@ -24,40 +28,44 @@ export class EmployeeDetailTableComponent implements OnInit {
     const headers = { 'content-Type': 'application/json' };
     this.http.get<any>('http://localhost:8080/getDetails', { headers: headers }).subscribe(map => {
       console.log(map.Data);
-      this.Employees = map.Data;
+      this.employees = map.Data;
     })
   }
+  getFormattedDate(ts: any) {
+    return new Date(ts).toLocaleDateString('en-BD')
+  }
 
-  editEmployee(emp:any){
-this.emoloyees.id = emp.id
-this.emoloyees.firstname=emp.firstname
-this.emoloyees.lastname=emp.lastname
-this.emoloyees.fathername=emp.fathername
-this.emoloyees.mothername=emp.mothername
-this.emoloyees.dateofbirth=emp.deteofbirth
-this.emoloyees.placeofbirth=emp.placeofbirth
-this.emoloyees.gender=emp.gender
-this.emoloyees.languageknown=emp.languageknown
-this.emoloyees.nationalid=emp.nationalid
-this.emoloyees.birthid=emp.birthid
-this.emoloyees.nationality=emp.nationality
-this.emoloyees.devision=emp.devision
-this.emoloyees.district=emp.district
-this.emoloyees.police=emp.police
-this.emoloyees.vill=emp.vill
-this.emoloyees.postoffice=emp.postoffice
-this.emoloyees.pcode=emp.pcode
-this.emoloyees.qualification=emp.qualification
-this.emoloyees.instituited=emp.instituited
-this.emoloyees.pass=emp.pass
-this.emoloyees.mark=emp.mark
-this.emoloyees.comaddress=emp.comaddress
-this.emoloyees.work=emp.work
-this.emoloyees.duration=emp.duration
-this.emoloyees.phone=emp.phone
-console.log(this.emoloyees);
 
-this.router.navigate(['/admin/showdetail'], { state: { emp: emp, isSave: false } })
+  editEmployee(em:any){
+this.employee.id=em.id;
+this.employee.firstname=em.firstname;
+this.employee.lastname=em.lastname;
+this.employee.fathername=em.fathername;
+this.employee.mothername=em.mothername;
+this.employee.dateofbirth=em.deteofbirth;
+this.employee.placeofbirth=em.placeofbirth;
+this.employee.gender=em.gender;
+this.employee.languageknown=em.languageknown;
+this.employee.nationalid=em.nationalid;
+this.employee.birthid=em.birthid;
+this.employee.nationality=em.nationality;
+this.employee.devision=em.devision;
+this.employee.district=em.district;
+this.employee.police=em.police;
+this.employee.vill=em.vill;
+this.employee.postoffice=em.postoffice;
+this.employee.pcode=em.pcode;
+this.employee.qualification=em.qualification;
+this.employee.instituited=em.instituited;
+this.employee.pass=em.pass;
+this.employee.mark=em.mark;
+this.employee.comaddress=em.comaddress;
+this.employee.work=em.work;
+this.employee.duration=em.duration;
+this.employee.phone=em.phone;
+console.log(this.employee);
+
+this.router.navigate(['/admin/details'], { state: { emp: em, isSave: false } })
 
   }
  

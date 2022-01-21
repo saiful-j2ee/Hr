@@ -10,14 +10,23 @@ import { Employee_detail } from './Employee_detail.model';
   styleUrls: ['./employee-details.component.css']
 })
 export class EmployeeDetailsComponent implements OnInit {
+  
+  isSave: boolean = true
+  submitted=false;
 
-  employee = new Employee_detail()
+  employee:Employee_detail = new Employee_detail()
   
   constructor(private router: Router, private http: HttpClient) { 
     
   }
 
   ngOnInit(): void {
+    if(history.state.isSave != undefined) {
+      this.employee = history.state.emp
+      this.isSave = history.state.isSave
+      console.log(history.state.emp);
+    }
+  
   
   }
   save(){
@@ -31,5 +40,19 @@ export class EmployeeDetailsComponent implements OnInit {
 
     })
   }
+
+  updateEmployee() {   
+    this.isSave = true;
+    const headers = {'content-Type': 'application/json' };
+    this.http.post("http://localhost:8080/update", JSON.stringify(this.employee), {headers: headers})
+      .subscribe(data => {
+        console.log(data);
+      })
+    this.employee = new Employee_detail()
+      // this.router.navigateByUrl("/admin/show");
+      // this.submitted = true;
+      //this.toastr.info("Employee Update Compleate")
+  }
+  
 
 }
