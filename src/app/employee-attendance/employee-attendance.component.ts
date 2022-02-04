@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeAttendanceComponent implements OnInit {
 
-  constructor() { }
+  
 
   ngOnInit(): void {
   }
+  today: number = Date.now();
+
+constructor() {
+    setInterval(() => {this.today = Date.now()}, 1);
+}
+
 
 }

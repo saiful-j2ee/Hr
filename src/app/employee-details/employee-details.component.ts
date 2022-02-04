@@ -44,7 +44,7 @@ export class EmployeeDetailsComponent implements OnInit {
   updateEmployee() {   
     this.isSave = true;
     const headers = {'content-Type': 'application/json' };
-    this.http.post("http://localhost:8080/update", JSON.stringify(this.employee), {headers: headers})
+    this.http.post("http://localhost:8080/update_detail", JSON.stringify(this.employee), {headers: headers})
       .subscribe(data => {
         console.log(data);
       })

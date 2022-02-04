@@ -59,10 +59,17 @@
 			<div id="personal-details">
 				<h2 align="center">Personal Deatils</h2>
 				<table width="100%">
-					<tr>
+					
+						
+					
+						<img src="" type="file" class="squre z-depth-1-half avatar-pic ">
+
+						<input type="file"[(ngModel)]="employee.photo">
+						<tr>
 						<td for="firstname">First Name</td>
 						<td>
-							<input type="text" name="firstname" id="firstname" placeholder="First Name" size="25" [(ngModel)]="employee.firstname">
+							<input type="text" name="firstname" id="firstname" placeholder="First Name" size="25"
+								[(ngModel)]="employee.firstname">
 						</td>
 						<!-- <td>Middle Name</td>
 					<td>
@@ -76,11 +83,13 @@
 					<tr>
 						<td for="fathername">Father's Name</td>
 						<td>
-							<input type="text" placeholder="Father's Name" size="25" id="fathername" name="fathername" [(ngModel)]="employee.fathername">
+							<input type="text" placeholder="Father's Name" size="25" id="fathername" name="fathername"
+								[(ngModel)]="employee.fathername">
 						</td>
 						<td for="mothername">Mother's Name</td>
 						<td>
-							<input type="text" placeholder="Mother's Name" size="25" name="mothername" id="mothername" [(ngModel)]="employee.mothername">
+							<input type="text" placeholder="Mother's Name" size="25" name="mothername" id="mothername"
+								[(ngModel)]="employee.mothername">
 						</td>
 					</tr>
 					<tr>
@@ -90,39 +99,47 @@
 						</td>
 						<td for="placeofbirth">Place of Birth</td>
 						<td>
-							<input type="text" placeholder="Place of Birth" name="placeofbirth" id="placeofbirth" size="25" [(ngModel)]="employee.placeofbirth">
+							<input type="text" placeholder="Place of Birth" name="placeofbirth" id="placeofbirth"
+								size="25" [(ngModel)]="employee.placeofbirth">
 						</td>
 					</tr>
 					<tr>
 						<td colspan="2" for="gender">Select Gender</td>
 						<td>
-							<input type="radio" name="gender" id="gender" value="male" [(ngModel)]="employee.gender">Male
+							<input type="radio" name="gender" id="gender" value="male"
+								[(ngModel)]="employee.gender">Male
 						</td>
 						<td>
-							<input type="radio" name="gender" id="gender" value="feale" [(ngModel)]="employee.gender">Female
+							<input type="radio" name="gender" id="gender" value="feale"
+								[(ngModel)]="employee.gender">Female
 						</td>
 					</tr>
-					
+
 					<tr class="formGroup">
 						<td for="phone">Mobile Number</td>
 						<td>
-							<input type="number" class="formGroup" placeholder="+880" name="phone" id="phone" size="25" [(ngModel)]="employee.phone">
+							<input type="number" class="formGroup" placeholder="+880" name="phone" id="phone" size="25"
+								[(ngModel)]="employee.phone">
 						</td>
 						<td for="email">Email Id</td>
 						<td>
-							<input type="text" placeholder="your id@gmail.com" name="email" id="email" size="25" [(ngModel)]="employee.email">
+							<input type="text" placeholder="your id@gmail.com" name="email" id="email" size="25"
+								[(ngModel)]="employee.email">
 						</td>
 					</tr>
 					<tr>
 						<td colspan="2" for="languageknown">Language Known</td>
 						<td>
-							<input type="checkbox" value="english" name="languageknown" id="languageknown" [(ngModel)]="employee.languageknown">English
+							<input type="checkbox" value="english" name="languageknown" id="languageknown"
+								[(ngModel)]="employee.languageknowne">English
 						</td>
 						<td>
-							<input type="checkbox" value="bengali" name="languageknown" id="languageknown" [(ngModel)]="employee.languageknown">Bengali
+							<input type="checkbox" value="bengali" name="languageknown" id="languageknown"
+								[(ngModel)]="employee.languageknownb">Bengali
 						</td>
 						<td>
-							<input type="checkbox" value="hindi" name="languageknown" id="languageknown" [(ngModel)]="employee.languageknown" >Hindi
+							<input type="checkbox" value="hindi" name="languageknown" id="languageknown"
+								[(ngModel)]="employee.languageknownh">Hindi
 						</td>
 					</tr>
 					<!-- <tr>
@@ -138,11 +155,13 @@
 					<tr>
 						<td for="nationalid">National Id No</td>
 						<td>
-							<input type="number" name="nationalid" id="nationalid" placeholder="National id Number" size="25" [(ngModel)]="employee.nationalid">
+							<input type="number" name="nationalid" id="nationalid" placeholder="National id Number"
+								size="25" [(ngModel)]="employee.nationalid">
 						</td>
 						<td for="birthid">Birth Card Number</td>
 						<td>
-							<input type="number" name="birthid" id="birthid" placeholder="Birth Card Number" size="25" [(ngModel)]="employee.birthid">
+							<input type="number" name="birthid" id="birthid" placeholder="Birth Card Number" size="25"
+								[(ngModel)]="employee.birthid">
 						</td>
 					</tr>
 				</table>
@@ -157,15 +176,17 @@
 					<tr>
 						<td for="nationality">Nationality</td>
 						<td>
-							<input type="radio" name="nationality" id="nationality" value="bangladesh" [(ngModel)]="employee.nationality">Bangladesh
+							<input type="radio" name="nationality" id="nationality" value="bangladesh"
+								[(ngModel)]="employee.nationality">Bangladesh
 						</td>
 						<td>
 
-							<input type="radio" name="nationality"  id="nationality" value="other" [(ngModel)]="employee.nationality">Other
+							<input type="radio" name="nationality" id="nationality" value="other"
+								[(ngModel)]="employee.nationality">Other
 
 						</td>
 					</tr>
-				
+
 					<tr>
 						<td for="devision">Devision</td>
 						<td>
@@ -260,11 +281,11 @@
 					<tr>
 						<td for="pl">Police Station</td>
 						<td>
-							<input type="text" size="25" name="police" id="police"[(ngModel)]="employee.police">
+							<input type="text" size="25" name="police" id="police" [(ngModel)]="employee.police">
 						</td>
 					</tr>
 					<tr>
-						
+
 						<td for="vill">Vill / Para / House No / Road:</td>
 						<td>
 							<input type="text" size="25" name="vill" id="vill" [(ngModel)]="employee.vill">
@@ -273,7 +294,8 @@
 					<tr>
 						<td for="postoffice">Post Office</td>
 						<td>
-							<input type="text" size="25" name="postoffice" id="postoffice" [(ngModel)]="employee.postoffice">
+							<input type="text" size="25" name="postoffice" id="postoffice"
+								[(ngModel)]="employee.postoffice">
 						</td>
 						<td for="pcode">Pin Code</td>
 						<td>
@@ -324,8 +346,8 @@
 								<option value="Rangpur">Rangpur</option>
 								<option value="Mymensingh">Mymensingh</option>
 								<option value="Sylhet">Sylhet.</option>
-								
-								
+
+
 							</select>
 						</td>
 					</tr>
@@ -404,7 +426,7 @@
 
 						</td>
 					</tr>
-					
+
 					<tr>
 						<td>Police Station</td>
 						<td>
@@ -447,10 +469,12 @@
 					<tr>
 						<td>1</td>
 						<td>
-							<input type="text" size="25" name="qulafication" id="qulafication" [(ngModel)]="employee.qualification">
+							<input type="text" size="25" name="qulafication" id="qulafication"
+								[(ngModel)]="employee.qualification">
 						</td>
 						<td>
-							<input type="text" size="25" name="instituited" id="instituited" [(ngModel)]="employee.instituited">
+							<input type="text" size="25" name="instituited" id="instituited"
+								[(ngModel)]="employee.instituited">
 						</td>
 						<td>
 							<input type="text" size="25" name="pass" id="pass" [(ngModel)]="employee.pass">
@@ -462,10 +486,12 @@
 					<tr>
 						<td>2</td>
 						<td>
-							<input type="text" size="25" name="qualification" id="qualification" [(ngModel)]="employee.qualification">
+							<input type="text" size="25" name="qualification" id="qualification"
+								[(ngModel)]="employee.qualification">
 						</td>
 						<td>
-							<input type="text" size="25" name="instituited" id="instituited" [(ngModel)]="employee.instituited">
+							<input type="text" size="25" name="instituited" id="instituited"
+								[(ngModel)]="employee.instituited">
 						</td>
 						<td>
 							<input type="text" size="25" name="pass" id="pass" [(ngModel)]="employee.pass">
@@ -479,10 +505,12 @@
 					<tr>
 						<td>3</td>
 						<td>
-							<input type="text" size="25" name="qualification" id="qualification" [(ngModel)]="employee.qualification">
+							<input type="text" size="25" name="qualification" id="qualification"
+								[(ngModel)]="employee.qualification">
 						</td>
 						<td>
-							<input type="text" size="25" name="instituited" id="instituited" [(ngModel)]="employee.instituited">
+							<input type="text" size="25" name="instituited" id="instituited"
+								[(ngModel)]="employee.instituited">
 						</td>
 						<td>
 							<input type="text" size="25" name="pass" id="pass" [(ngModel)]="employee.pass">
@@ -494,10 +522,12 @@
 					<tr>
 						<td>4</td>
 						<td>
-							<input type="text" size="25" name="qualification" id="qualification" [(ngModel)]="employee.qualification">
+							<input type="text" size="25" name="qualification" id="qualification"
+								[(ngModel)]="employee.qualification">
 						</td>
 						<td>
-							<input type="text" size="25" name="instituited" id="instituited" [(ngModel)]="employee.instituited">
+							<input type="text" size="25" name="instituited" id="instituited"
+								[(ngModel)]="employee.instituited">
 						</td>
 						<td>
 							<input type="text" size="25" name="pass" id="pass" [(ngModel)]="employee.pass">
@@ -522,7 +552,8 @@
 					<tr>
 						<td>1</td>
 						<td>
-							<input type="text" size="25" name="comaddress " id="comaddress" [(ngModel)]="employee.comaddress">
+							<input type="text" size="25" name="comaddress " id="comaddress"
+								[(ngModel)]="employee.comaddress">
 						</td>
 						<td>
 							<input type="text" size="25" name="work" id="work" [(ngModel)]="employee.work">
@@ -531,13 +562,15 @@
 							<input type="date" size="25" name="duration" id="duration" [(ngModel)]="employee.duration">
 						</td>
 						<td>
-							<input type="date" size="25" name="enddutation" id="enddutation" [(ngModel)]="employee.enddutation">
+							<input type="date" size="25" name="enddutation" id="enddutation"
+								[(ngModel)]="employee.enddutation">
 						</td>
 					</tr>
 					<tr>
 						<td>2</td>
 						<td>
-							<input type="text" size="25" name="comaddress " id="comaddress" [(ngModel)]="employee.comaddress">
+							<input type="text" size="25" name="comaddress " id="comaddress"
+								[(ngModel)]="employee.comaddress">
 						</td>
 						<td>
 							<input type="text" size="25" name="work" id="work" [(ngModel)]="employee.work">
@@ -546,13 +579,15 @@
 							<input type="date" size="25" name="duration" id="duration" [(ngModel)]="employee.duration">
 						</td>
 						<td>
-							<input type="date" size="25" name="enddutation" id="enddutation" [(ngModel)]="employee.enddutation">
+							<input type="date" size="25" name="enddutation" id="enddutation"
+								[(ngModel)]="employee.enddutation">
 						</td>
 					</tr>
 					<tr>
 						<td>3</td>
 						<td>
-							<input type="text" size="25" name="comaddress " id="comaddress" [(ngModel)]="employee.comaddress">
+							<input type="text" size="25" name="comaddress " id="comaddress"
+								[(ngModel)]="employee.comaddress">
 						</td>
 						<td>
 							<input type="text" size="25" name="work" id="work" [(ngModel)]="employee.work">
@@ -561,13 +596,15 @@
 							<input type="date" size="25" name="duration" id="duration" [(ngModel)]="employee.duration">
 						</td>
 						<td>
-							<input type="date" size="25" name="enddutation" id="enddutation" [(ngModel)]="employee.enddutation">
+							<input type="date" size="25" name="enddutation" id="enddutation"
+								[(ngModel)]="employee.enddutation">
 						</td>
 					</tr>
 					<tr>
 						<td>4</td>
 						<td>
-							<input type="text" size="25" name="comaddress " id="comaddress" [(ngModel)]="employee.comaddress">
+							<input type="text" size="25" name="comaddress " id="comaddress"
+								[(ngModel)]="employee.comaddress">
 						</td>
 						<td>
 							<input type="text" size="25" name="work" id="work" [(ngModel)]="employee.work">
@@ -576,7 +613,8 @@
 							<input type="date" size="25" name="duration" id="duration" [(ngModel)]="employee.duration">
 						</td>
 						<td>
-							<input type="date" size="25" name="enddutation" id="enddutation" [(ngModel)]="employee.enddutation">
+							<input type="date" size="25" name="enddutation" id="enddutation"
+								[(ngModel)]="employee.enddutation">
 						</td>
 					</tr>
 				</table>
@@ -589,13 +627,16 @@
 					<tr>
 						<td for="jobtype">Job Type</td>
 						<td>
-							<input type="radio" name="jobtype" id="jobtype" [(ngModel)]="employee.jobtype" value="permanent">Permanent
+							<input type="radio" name="jobtype" id="jobtype" [(ngModel)]="employee.jobtype"
+								value="permanent">Permanent
 						</td>
 						<td>
-							<input type="radio" name="jobtype" id="jobtype" value="contrect" [(ngModel)]="employee.jobtype">Contrect
+							<input type="radio" name="jobtype" id="jobtype" value="contrect"
+								[(ngModel)]="employee.jobtype">Contrect
 						</td>
 						<td>
-							<input type="radio" name="jobtype" id="jobtype" value="other" [(ngModel)]="employee.jobtype">Other
+							<input type="radio" name="jobtype" id="jobtype" value="other"
+								[(ngModel)]="employee.jobtype">Other
 						</td>
 					</tr>
 					<tr>
@@ -610,13 +651,16 @@
 					<tr>
 						<td for="joblocation">Preferred Job Location</td>
 						<td>
-							<input type="radio" name="joblocation" value="dhaka" [(ngModel)]="employee.joblocation">Dhaka
+							<input type="radio" name="joblocation" value="dhaka"
+								[(ngModel)]="employee.joblocation">Dhaka
 						</td>
 						<td>
-							<input type="radio" name="joblocation" value="chittagone" [(ngModel)]="employee.joblocation">Chittagone
+							<input type="radio" name="joblocation" value="chittagone"
+								[(ngModel)]="employee.joblocation">Chittagone
 						</td>
 						<td>
-							<input type="radio" name="joblocation" value="other" [(ngModel)]="employee.joblocation">Other
+							<input type="radio" name="joblocation" value="other"
+								[(ngModel)]="employee.joblocation">Other
 						</td>
 					</tr>
 					<!-- <tr>
@@ -639,10 +683,10 @@
 					<tr>
 						<td></td>
 						<td>
-							<button type="submit" value="Submit" >Submit</button>
+							<button type="submit" value="Submit">Submit</button>
 						</td>
 						<td>
-							<button type="reset" value="Reset" >Reset</button>
+							<button type="reset" value="Reset">Reset</button>
 						</td>
 						<td></td>
 					</tr>

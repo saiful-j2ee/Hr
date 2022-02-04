@@ -36,7 +36,7 @@ export class Employee_detail{
     email:String="";
     nationalid:String="";
     birthid:String="";
-
+    photo:String="";
     constructor(){}
 
 }

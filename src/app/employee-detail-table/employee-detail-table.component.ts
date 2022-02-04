@@ -71,6 +71,13 @@ this.router.navigate(['/admin/details'], { state: { emp: em, isSave: false } })
  
 
   deleteEmployee(emp:any){
+    const headers = { 'content-Type': 'application/json' };
+    this.http.get("http://localhost:8080/delete_detail/"+emp.id, { headers: headers })
+      .subscribe(data => {
+        console.log(data);
+        this.showTable();
+
+      })
 
   }
 }

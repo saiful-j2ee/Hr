@@ -20,7 +20,8 @@ const routes: Routes = [
       {path:"addemp", component:AddemployeeComponent},
       {path:"show",component:ShowtableComponent},
       {path:"details",component:EmployeeDetailsComponent},
-      {path:"showdetail",component:EmployeeDetailTableComponent}
+      {path:"showdetail",component:EmployeeDetailTableComponent},
+      {path:"attendence",component:EmployeeAttendanceComponent}
     ]},
   
   { path: 'signup', component: SignupComponent },
