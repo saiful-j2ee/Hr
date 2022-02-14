@@ -16,6 +16,7 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   save() {
     this.submitted = true;
     const headers = { 'content-Type': 'application/json' };

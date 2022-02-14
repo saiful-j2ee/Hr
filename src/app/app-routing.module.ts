@@ -9,6 +9,7 @@ import { EmployeeAttendanceComponent } from './employee-attendance/employee-atte
 import { EmployeeDetailTableComponent } from './employee-detail-table/employee-detail-table.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { LoginComponent } from './login/login.component';
+import { SalaryComponent } from './salary/salary.component';
 import { ShowtableComponent } from './showtable/showtable.component';
 
 const routes: Routes = [
@@ -21,11 +22,12 @@ const routes: Routes = [
       {path:"show",component:ShowtableComponent},
       {path:"details",component:EmployeeDetailsComponent},
       {path:"showdetail",component:EmployeeDetailTableComponent},
-      {path:"attendence",component:EmployeeAttendanceComponent}
+      {path:"attendence",component:EmployeeAttendanceComponent},
+      {path:"salary",component:SalaryComponent}
     ]},
   
   { path: 'signup', component: SignupComponent },
-  {path:"attendance",component:EmployeeAttendanceComponent}
+ 
 ];
 
 @NgModule({
