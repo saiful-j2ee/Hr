@@ -14,23 +14,76 @@
               <p>{{today | date:'fullDate'}} <br><h1 class="row justify-content-center"><b>{{today | date:'h:mm:ss a'}}</b></h1></p>
             </h1>
             </div>
-
-              
-
-
                <div>
                <label for="">enter your password </label>
                </div>
                <div>
                <input type="password">
+              </div> 
+              <div>           
+              <button type="button" class="btn btn-info mt-3" data-toggle="modal" data-target="#myModal">login</button>
+              <button type="button" class="btn btn-info mt-3 ml-8" data-toggle="modal" data-target="#myModal">logout</button>
+             
+            </div>
+           
+              </form>
+           
+              <div class="container mt-4">
+              <div class="">
+              <form action="">
+                <div class="container justify-content-center">
+                    <img src="{emp.imagesUri}" alt="">
+                </div>
+
+                <div >
+                 
+                  <label for="">Id Card No :</label>
+                  <input type="number" class="ml-2">
+                  <label for="" class="ml-2">Date :</label>
+                  <input type="date" class="ml-2">
+                </div>
+                <div class="mt-4">
+                <label for="">First Name  :</label>
+                <input type="text" class="ml-2">
+                <label for="" class="ml-4">Last Name  :</label>
+                <input type="text" class="ml-2">
+                <label for="" class="ml-4">Mobile  :</label>
+                <input type="number" class="ml-2">
               </div>
-              <button type="submit" class="mt-3" style="margin-right: 25px;" >Submit</button>
+              
+              <div class="mt-4">
+                <label for="">InTime :</label>
+                <input type="time" class="ml-2">
+                <label for="" class="ml-4">OutTime :</label>
+               
+                <input type="time" class="ml-2">
+                <label for="" class="ml-4">Working Hour  :</label>
+                <input type="number" class="ml-2">
+                </div>
+                <div class="mt-3">
+                <label for="" class="ml-2">Late :</label>
+                <input type="checkbox" class="ml-2" value="Late">
+                <label for="" class="ml-4">Leave :</label>
+                <input type="checkbox" class="ml-2" value="Leave">
+                <label for="" class="ml-4">Absence :</label>
+                <input type="checkbox" class="ml-2" value="Absence">
+                <label for="" class="ml-4">Preasent :</label>
+                <input type="checkbox" class="ml-2" value="Preasent">
+              </div>
+          
               </form>
             </div>
-
+            </div>
+          </div>
           </div>
         </div>
       </div>
     </div>
+    
   </section>
+
 </div>
+
+
+  <!-- Modal -->
+

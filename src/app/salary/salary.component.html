@@ -3,113 +3,115 @@
 
 
 <p>salary works!</p>
-
+<form (ngSubmit)="save()">
 
     <table border="1">
         <tr height="100px"
             style="background-color:#363636;color:#ffffff;text-align:center;font-size:24px; font-weight:600;">
-            <td colspan='4'>Daliyaspirants.com Design Limited</td>
+            <td colspan='4'>Salary_Pament</td>
         </tr>
         <tr>
-            <th>Personel NO:</th>
-            <td>0123456</td>
-            <th>Name</th>
-            <td>Chandra</td>
+            <th for="userid">Id NO:</th>
+            <td><input type="number" name="userid" id="userid" [(ngModel)]="sal.userid"></td>
+          
         </tr>
+        <tr>  <th for="username">Name</th>
+            <td><input type="text" id="username" name="username"[(ngModel)]="sal.username"></td></tr>
         <!-----2 row--->
         <tr>
-            <th>Bank</th>
-            <td>x0x0x0</td>
-            <th>Bank A/c No.</th>
-            <td>0x2x6x25x6</td>
+            <th for="bankname">Bank Name</th>
+            <td><input type="text" name="bankname" id="bankname"[(ngModel)]="sal.bankname"></td>
+
+            <th for="accountno">Bank A/c No.</th>
+            <td><input type="number" name="accountno" id="accountno"[(ngModel)]="sal.accountno"></td>
         </tr>
         <!------3 row---->
         <tr>
-            <th>DOB</th>
-            <td><input type="date"></td>
-            <th>Lop Days</th>
-            <td><input type="number"></td>
+            <th for="makedate">Date</th>
+            <td><input type="date" name="makedate" id="makedate"[(ngModel)]="sal.makedate"></td>
+           
         </tr>
         <!------4 row---->
         <tr>
-            <th>PF No.</th>
-            <td><input type="number"></td>
-            <th>STD days</th>
-            <td><input type="number"></td>
+            
+            <th for="stdays">Total days</th>
+            <td><input type="number" name="stdays" id="stdate"[(ngModel)]="sal.stdays" (input)='calculatAbsence()'></td>
+            <th for="workingday">Working Days</th>
+            <td><input type="number" name="workingday" id="workingday"[(ngModel)]="sal.workingday" (input)='calculatAbsence()' ></td>
         </tr>
         <!------5 row---->
+        <th for="absenceday">absence</th>
+        <td><input type="number" name="absenceday" id="absenceday"[(ngModel)]="sal.absenceday" (input)='calulateAbsenceTaka()'></td>
         <tr>
-            <th>Location</th>
-            <td>India</td>
-            <th>Working Days</th>
-            <td><input type="number"></td>
+            <th for="location">Location</th>
+            <td><input type="text" name="location" id="location"[(ngModel)]="sal.location"></td>
+
+            
         </tr>
         <!------6 row---->
         <tr>
-            <th>Department</th>
-            <td>IT</td>
-            <th>Designation</th>
-            <td>Designer</td>
+            <th for="departnent">Department</th>
+            <td><input type="text" name="departnent" id="departnent"[(ngModel)]="sal.departnent"></td>
+            <th for="designation">Designation</th>
+            <td><input type="text" name="designation" id="designation"[(ngModel)]="sal.designation"></td>
         </tr>
     </table>
-    <tr></tr>
+   
     <br />
     <table border="1">
         <tr>
-            <th>Earnings</th>
+            <th >Earnings</th>
             <th>Amount</th>
             <th>Deductions</th>
             <th>Amount</th>
         </tr>
         <tr>
-            <td>Basic</td>
-            <td><input type="number"></td>
-            <td>provident fund</td>
-            <td><input type="number"></td>
+            <td for="basic">Basic</td>
+            <td><input type="number" name="basic" id="basic"[(ngModel)]="sal.basic" (input)='calulateAbsenceTaka()' (input)='grossEarn()'(input)='netSalary()'></td>
+            <td for="provident">provident fund</td>
+            <td><input type="number" name="provident" id="provident"[(ngModel)]="sal.provident" (input)='grossDedaction()'(input)='netSalary()'></td>
         </tr>
         <tr>
-            <td>House Rent Allowance</td>
-            <td><input type="number"></td>
-            <td>professional tax</td>
-            <td><input type="number"></td>
+            <td for="houserent">House Rent Allowance</td>
+            <td><input type="number" name="houserent" id="houserent"[(ngModel)]="sal.houserent" (input)='grossEarn()'(input)='netSalary()'></td>
+            <td for="professionaltex">professional tax</td>
+            <td><input type="number" name="professionaltex" id="professionaltex"[(ngModel)]="sal.professionaltex" (input)='grossDedaction()'(input)='netSalary()'></td>
         </tr>
         <tr>
-            <td>special Allowance</td>
-            <td><input type="number"></td>
-            <td>Income tax</td>
-            <td><input type="number"></td>
+            <td for="specialallowance">special Allowance</td>
+            <td><input type="number" name="specialallowance" id="specialallowance"[(ngModel)]="sal.specialallowance" (input)='grossEarn()'(input)='netSalary()'></td>
+            <td for="incometex">Income tax</td>
+            <td><input type="number" name="incometex" id="incometex"[(ngModel)]="sal.incometex"(input)='grossDedaction()'(input)='netSalary()'></td>
         </tr>
         <tr>
-            <td>conveyance</td>
-            <td><input type="number"></td>
+            <td for="transport">transport Allowance</td>
+            <td><input type="number" name="transport" id="transport"[(ngModel)]="sal.transport" (input)='grossEarn()'(input)='netSalary()'></td>
+            <td for="absence">Absence dedaction</td>
+            <td><input type="number" name="absence" id="absence"[(ngModel)]="sal.absence" (input)='grossDedaction()'(input)='netSalary()'></td>
+        </tr>
+       
+      
+        <tr>
+            <td for="bonus">bonus</td>
+            <td><input type="number" name="bonus" id="bonus"[(ngModel)]="sal.bonus"(input)='grossEarn()'(input)='netSalary()'></td>
         </tr>
         <tr>
-            <td>ADD Special allowance</td>
-            <td><input type="number"></td>
+            <td for="medicalallowance">medical Allowance</td>
+            <td><input type="number" name="medicalallowance" id="medicalallowance"[(ngModel)]="sal.medicalallowance"(input)='grossEarn()'(input)='netSalary()'></td>
         </tr>
         <tr>
-            <td>shift Allowance</td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <td>bonus</td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <td>medical Allowance</td>
-            <td><input type="number"></td>
-        </tr>
-        <tr>
-            <th>Gross Earnings</th>
-            <td>Rs.38500</td>
-            <th>Gross Deductions</th>
-            <td>Rs.3000</td>
+            <th for="grossearn">Gross Earnings</th>
+            <td><input type="number" name="grossearn" id="grossearn"[(ngModel)]="sal.grossearn" (input)='netSalary()'></td>
+            <th for="grossdedaction">Gross Deductions</th>
+            <td><input type="number" name="grossdedaction" id="grossdedaction"[(ngModel)]="sal.grossdedaction" (input)='netSalary()'></td>
         </tr>
         <tr>
             <td></td>
-            <td><strong>NET PAY</strong></td>
-            <td>Rs.35500</td>
+            <th><strong for="netsalary">NET PAY</strong></th>
+            <td><input type="number" name="netsalary" id="netsalary"[(ngModel)]="sal.netsalary"></td>
             <td></td>
         </tr>
+        <button type="submit">submit</button>
     </table>
+</form>
 </div>

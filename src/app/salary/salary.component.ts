@@ -1,4 +1,7 @@
+import { HttpClient, ɵHttpInterceptingHandler } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Salary } from './salary.model';
 
 @Component({
   selector: 'app-salary',
@@ -7,9 +10,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalaryComponent implements OnInit {
 
-  constructor() { }
+  sal: Salary = new Salary();
+
+  constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
+
   }
+
+  save() {
+    console.log(this.sal);
+
+    const headers = { 'content-Type': 'application/json' };
+    this.http.post("http://localhost:8080/salarysave", JSON.stringify(this.sal), { headers: headers })
+      .subscribe(data => {
+        console.log(data);
+
+      })
+
+  }
+
+  calculatAbsence() {
+    this.sal.absenceday = (this.sal.stdays - this.sal.workingday);
+
+  }
+
+  calulateAbsenceTaka() {
+    this.sal.absence = this.sal.absenceday * (this.sal.basic / 31);
+
+  }
+  grossEarn() {
+    this.sal.grossearn = (this.sal.basic + this.sal.bonus + this.sal.houserent + this.sal.transport + this.sal.medicalallowance + this.sal.specialallowance)
+  }
+  grossDedaction() {
+    this.sal.grossdedaction = (this.sal.professionaltex + this.sal.incometex + this.sal.absence + this.sal.provident);
+
+  }
+
+  netSalary() {
+    this.sal.netsalary = this.sal.grossearn-this.sal.grossdedaction;
+  }
+
 
 }

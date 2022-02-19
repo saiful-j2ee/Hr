@@ -18,7 +18,8 @@ import { ShowtableComponent } from './showtable/showtable.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeDetailTableComponent } from './employee-detail-table/employee-detail-table.component';
 import { EmployeeAttendanceComponent } from './employee-attendance/employee-attendance.component';
-import { SalaryComponent } from './salary/salary.component'
+import { SalaryComponent } from './salary/salary.component';
+import { SalarytableComponent } from './salarytable/salarytable.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SalaryComponent } from './salary/salary.component'
     EmployeeDetailsComponent,
     EmployeeDetailTableComponent,
     EmployeeAttendanceComponent,
-    SalaryComponent
+    SalaryComponent,
+    SalarytableComponent
   ],
   imports: [
     BrowserModule,

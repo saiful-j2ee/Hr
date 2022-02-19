@@ -59,19 +59,20 @@ $(document).ready(function(){
                 <table class="table table-responsive table-bordered border-primary table-sm" style="background-color: white;   height:auto ;width: 1050px;">
                     <thead class="thead" >
                       <tr>
-                        <th>Id</th>
+                        <th>Id No</th>
                         <th>Images</th>
                         <th>ImagesUri</th>
-                        <th>Designation</th>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
+                        <th>User Name</th>
+                        <th>Bank name</th>
+                        <th>Bank account no</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Total WorkingDays</th>
+                        <th>WorkingDays</th>
+                        <th>Absencen Day</th>
+                        <th>Dasignation</th>
                         <th>Department</th>
-                        <th>Gender</th>
-                        <th>Birth Date</th>
-                        <th>Present_Address</th>
-                        <th>Permanent_Address</th>
-                        <th>Mobile_No</th>
-                        <th>Email_Address</th>
+                        <th ></th>
                         <th>Password</th>
                         <th>Basic_Salary</th>
                         <th>House_Rent</th>
@@ -84,33 +85,33 @@ $(document).ready(function(){
                       </tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor="let emp of employees; index as i;">
-                        <td>{{emp.id}}</td>
-                        <td><img src={{emp.imagesUri}}></td>
-                        <td>{{emp.designation}}</td>
-                        <td>{{emp.fname}}</td>
-                        <td>{{emp.lname}}</td>
-                        <td>{{emp.department}}</td>
+                      <tr *ngFor="let salary of salarys; index as i;">
+                        <td>{{salary.id}}</td>
+                        <td><img src={{salary.imagesUri}}></td>
+                        <td>{{salary.designation}}</td>
+                        <td>{{salary.fname}}</td>
+                        <td>{{salary.lname}}</td>
+                        <td>{{salary.department}}</td>
                        
                        
-                        <td>{{emp.gender}}</td>
-                        <td>{{emp.dob}}</td>
-                        <td>{{emp.paddress}}</td>
-                        <td>{{emp.praddress}}</td>
-                        <td>{{emp.phone}}</td>
-                        <td>{{emp.email}}</td>
-                        <td>{{emp.password}}</td>
-                        <td>{{emp.basicsalary}}</td>
-                        <td>{{emp.houserent}}</td>
-                        <td>{{emp.medical}}</td>
-                        <td>{{emp.transport}}</td>
-                        <td>{{emp.overtime}}</td>
-                        <td>{{emp.salary}}</td>
+                        <td>{{salary.gender}}</td>
+                        <td>{{salary.dob}}</td>
+                        <td>{{salary.paddress}}</td>
+                        <td>{{salary.praddress}}</td>
+                        <td>{{salary.phone}}</td>
+                        <td>{{salary.email}}</td>
+                        <td>{{salary.password}}</td>
+                        <td>{{salary.basicsalary}}</td>
+                        <td>{{salary.houserent}}</td>
+                        <td>{{salary.medical}}</td>
+                        <td>{{salary.transport}}</td>
+                        <td>{{salary.overtime}}</td>
+                        <td>{{salary.salarys}}</td>
                       
                         <td>
-                          <button class="btn btn-primary" (click)="editEmployee(emp)" >Edit</button>
-                          <button class="btn btn-danger" (click)="deleteEmployee(emp)">Delete</button>
-                        </td>
+                          <button class="btn btn-primary" (click)="editEmployee()" >Edit</button>
+                          <button class="btn btn-danger" (click)="deleteEmployee()">Delete</button>
+                        </td>salay
                       </tr>
                     </tbody>
             

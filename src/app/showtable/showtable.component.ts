@@ -45,15 +45,28 @@ export class ShowtableComponent implements OnInit {
 
   editEmployee(employee: any) {
     this.em.id = employee.id;
+    
     this.em.designation=employee.designation
     this.em.fname = employee.fname;
     this.em.lname = employee.lname;
     this.em.department = employee.department;
-    this.em.position = employee.position;
-    this.em.area = employee.area;
+
+   
     this.em.gender = employee.gender;
     this.em.dob = employee.dob;
-
+    this.em.paddress = employee.paddress;
+    this.em.praddress = employee.praddress;
+    this.em.phone= employee.phone;
+    this.em.email = employee.email;
+    this.em.password = employee.password;
+    this.em.basicsalary = employee.basicsalary;
+    this.em.houserent = employee.houserent;
+    this.em.medical = employee.medical;
+    this.em.transport = employee.transport;
+    this.em.overtime= employee.overtime;
+    this.em.salary = employee.salary;
+   
+    
     this.router.navigate(['/admin/addemp'], { state: { emp: employee, isSave: false } })
   }
 

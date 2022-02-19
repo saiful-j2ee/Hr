@@ -11,15 +11,23 @@
 
                   <div class="col-lg-6 bg-white">
                     <div class="p-5">
-                  <h3 class="fw-normal mb-5 " style="color: #4835d4;">General Infomation</h3>
-                  <div>
-                    <div class="text-center">
-                      <img src="..." class="rounded" alt="...">
-                    </div>
-                  </div>
-                    
+                      <h3 class="fw-normal mb-5 " style="color: #4835d4;">General Infomation</h3>
+
+
+
+                      <div class="container row">
+                        <div class="col-md-6">
+                          <label class="form-control-label px-3">
+                            Photo <span class="text-danger"> *</span></label>
+                          <input type="file" id="file" name="file" multiple
+                            (change)="fileChange($event.target)"><br><br>
+                        </div>
+                      </div>
+
+
+
                       <label for="designation">Designation :</label>
-                      
+
                       <div class="mb-4 pb-2">
 
                         <select class="select" name="designation" id="designation" [(ngModel)]="ep.designation">
@@ -63,17 +71,17 @@
                         </select>
                       </div>
 
-                      <div class="mb-4 pb-2">
+                      <!-- <div class="mb-4 pb-2">
                         <div class="form-outline">
                           <label class="form-label" for="position">Position</label>
                           <input type="text" id="position" name="position" [(ngModel)]="ep.position"
                             class="form-control form-control-lg" />
 
                         </div>
-                      </div>
+                      </div> -->
 
                       <div class="row">
-                        <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                        <!-- <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
 
                           <div class="form-outline">
 
@@ -82,8 +90,8 @@
                               class="form-control form-control-lg" />
                           </div>
 
-                        </div>
-                        <div class="col-md-8 mt-4">
+                        </div> -->
+                        <div class="col-md-8 mt-3">
                           <label for="gender">Gender :</label>
                           <div>
                             <input type="radio" name="gender" id="gender" [(ngModel)]="ep.gender" value="male"
@@ -95,7 +103,7 @@
 
                           </div>
                         </div>
-                        <div class="mb-4 pb-2">
+                        <div class="mb-4 pb-2 mt-3">
                           <div class="form-outline">
                             <label class="form-label" for="dob">Date date_of_birth</label>
                             <input type="date" id="dob" name="dob" [(ngModel)]="ep.dob"
@@ -103,18 +111,72 @@
 
                           </div>
                         </div>
+
+                        <div class="mb-4 pb-2">
+                          <div class="form-outline form-white">
+                            <label class="form-label" for="paddress">Preasent Address </label>
+                            <input type="text" id="paddress" name="paddress" [(ngModel)]="ep.paddress"
+                              class="form-control form-control-lg" />
+
+                          </div>
+                        </div>
+
+                        <div class="mb-4 pb-2">
+                          <div class="form-outline form-white">
+                            <label for="praddress">Permanaent Address</label>
+                            <input type="text" name="praddress" id="praddress" class="form-control form-control-lg"
+                              [(ngModel)]="ep.praddress">
+                          </div>
+                        </div>
+
+                        <!-- 
+                      <div class="mb-4 pb-2">
+                        <div class="form-outline form-white">
+                          <label class="form-label" for="praddress">Parmanent Address </label>
+                          <input type="text" id="praddress" [(ngModel)]="ep.praddress" name="praddress"
+                            class="form-control form-control-lg" />
+
+                        </div>
+                      </div> -->
+
+                        <div class="row">
+
+                          <div class="col-md-7 mb-4 pb-2">
+
+                            <div class="form-outline form-white">
+                              <label class="form-label" for="phone">Phone Number</label>
+                              <input type="text" id="phone" name="phone" [(ngModel)]="ep.phone"
+                                class="form-control form-control-lg" />
+
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="mb-4">
+
+                          <label class="form-label" for="email">Your Email</label>
+                          <div class="form-outline form-white">
+                            <input type="text" id="email" name="email" [(ngModel)]="ep.email"
+                              class="form-control form-control-lg" />
+                          </div>
+
+
+
+                        </div>
+
                       </div>
 
                     </div>
                   </div>
                   <div class="col-lg-6 bg-indigo text-white">
                     <div class="p-5">
-                      <h3 class="fw-normal mb-5">Contact Details</h3>
+                      <h3 class="fw-normal mb-5">Others Information</h3>
 
                       <div class="mb-4 pb-2">
                         <div class="form-outline form-white">
-                          <label class="form-label" for="paddress">Preasent Address</label>
-                          <input type="text" id="paddress" name="paddress" [(ngModel)]="ep.paddress"
+                          <label class="form-label" for="password">Password</label>
+                          <input type="number" id="password" name="password" [(ngModel)]="ep.password"
                             class="form-control form-control-lg" />
 
                         </div>
@@ -122,53 +184,53 @@
 
                       <div class="mb-4 pb-2">
                         <div class="form-outline form-white">
-                          <label class="form-label" for="praddress">Parmanent Address</label>
-                          <input type="text" id="praddress" [(ngModel)]="ep.praddress" name="praddress"
+                          <label class="form-label" for="basicsalary">Basic Salary</label>
+                          <input type="number" id="basicsalary" [(ngModel)]="ep.basicsalary" name="praddress"
+                            class="form-control form-control-lg" (input)='calculateSalary()' />
+
+                        </div>
+                      </div>
+
+
+                      <div class=" mb-4 pb-2">
+
+                        <div class="form-outline form-white">
+                          <label class="form-label" for="houserent">House Rent</label>
+                          <input type="number" id="houserent" name="houserent" [(ngModel)]="ep.houserent"
+                            class="form-control form-control-lg" (input)='calculateSalary()' />
+
+                        </div>
+
+                      </div>
+                      <div class="col-md-7 mb-4 pb-2">
+
+                        <div class="form-outline form-white">
+                          <label class="form-label" for="medical">Medical Allowance</label>
+                          <input type="number" id="medical" (input)='calculateSalary()' name="medical" [(ngModel)]="ep.medical"
                             class="form-control form-control-lg" />
+
+                        </div>
+
+                      </div>
+
+
+                      <div class="mb-4 pb-2">
+                        <div class="form-outline form-white">
+                          <label class="form-label" for="transport">Tranport Allowance</label>
+                          <input type="number" id="transport" name="transport" [(ngModel)]="ep.transport"
+                            class="form-control form-control-lg"  (input)='calculateSalary()' />
 
                         </div>
                       </div>
 
                       <div class="row">
-                        <div class="col-md-5 mb-4 pb-2">
-
-                          <div class="form-outline form-white">
-                            <label class="form-label" for="pcode">Post Code</label>
-                            <input type="number" id="pcode" name="pcode" [(ngModel)]="ep.pcode"
-                              class="form-control form-control-lg" />
-
-                          </div>
-
-                        </div>
-                        <div class="col-md-7 mb-4 pb-2">
-
-                          <div class="form-outline form-white">
-                            <label class="form-label" for="place">Place</label>
-                            <input type="text" id="place" name="place" [(ngModel)]="ep.place"
-                              class="form-control form-control-lg" />
-
-                          </div>
-
-                        </div>
-                      </div>
-
-                      <div class="mb-4 pb-2">
-                        <div class="form-outline form-white">
-                          <label class="form-label" for="country">Country</label>
-                          <input type="text" id="country" name="country" [(ngModel)]="ep.country"
-                            class="form-control form-control-lg" />
-
-                        </div>
-                      </div>
-
-                      <div class="row">
 
                         <div class="col-md-7 mb-4 pb-2">
 
                           <div class="form-outline form-white">
-                            <label class="form-label" for="phone">Phone Number</label>
-                            <input type="text" id="phone" name="phone" [(ngModel)]="ep.phone"
-                              class="form-control form-control-lg" />
+                            <label class="form-label" for="overtime">Over Time Rate</label>
+                            <input type="number" id="overtime" name="overtime" [(ngModel)]="ep.overtime"
+                              class="form-control form-control-lg"  />
 
                           </div>
 
@@ -176,40 +238,36 @@
                       </div>
 
                       <div class="mb-4">
-                        
-                          <label class="form-label" for="email">Your Email</label>
-                          <div class="form-outline form-white">
-                          <input type="text" id="email" name="email" [(ngModel)]="ep.email"
+
+                        <label class="form-label" for="salary">Salary</label>
+                        <div class="form-outline form-white">
+                          <input type="number" id="salary" name="salary"  [(ngModel)] ="ep.salary"
                             class="form-control form-control-lg" />
-                          </div>
-                          <div *ngIf="submitted && f['email'].errors">
-                            <div class="error text-danger">
-                                Email is mandatory.
-                            </div>
                         </div>
-                        
+
+
+
+                      </div>
+
+                      <div class="form-check d-flex justify-content-start mb-4 pb-3">
+                        <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
+                        <label class="form-check-label text-white" for="form2Example3">
+                          I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your site.
+                        </label>
+                      </div>
+
+                      <button type="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Register</button>
 
                     </div>
-
-                    <div class="form-check d-flex justify-content-start mb-4 pb-3">
-                      <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
-                      <label class="form-check-label text-white" for="form2Example3">
-                        I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your site.
-                      </label>
-                    </div>
-
-                    <button type="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Register</button>
-
                   </div>
+
                 </div>
-
+              </form>
             </div>
-            </form>
-          </div>
 
+          </div>
         </div>
       </div>
     </div>
-</div>
-</section>
+  </section>
 </div>
