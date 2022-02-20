@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
+import { AttendanceInformationComponent } from './attendance-information/attendance-information.component';
 
 import { DashboardComponent } from './components/adminlayout/admin/dashboard/dashboard.component';
 import { AdminlayoutComponent } from './components/adminlayout/adminlayout.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
       {path:"details",component:EmployeeDetailsComponent},
       {path:"showdetail",component:EmployeeDetailTableComponent},
       {path:"attendence",component:EmployeeAttendanceComponent},
-      {path:"salary",component:SalaryComponent}
+      {path:"salary",component:SalaryComponent},
+      {path:"att_info",component:AttendanceInformationComponent}
     ]},
   
   { path: 'signup', component: SignupComponent },

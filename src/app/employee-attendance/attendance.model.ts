@@ -1,18 +1,21 @@
-import { Time } from "@angular/common";
+
 
 export class Attendance{
 
+ 
+
     id:number=0;
     wdate:string='';
-    firstname:string='';
-    lastname:string='';
+    password:number=0;
+    fname:string='';
+    lname:string='';
     phone:number=0;
     intime:string='';
     outtime:string='';
-    late:string='';
-    leave:string='';
-    absence:string='';
-    present:string='';
+    atlate:boolean=false;
+    atleave:boolean=false;
+    atabsence:boolean=false;
+  
     totalhour:number=0;
 
 

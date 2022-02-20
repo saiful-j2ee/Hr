@@ -30,13 +30,26 @@ export class SalaryComponent implements OnInit {
 
   }
 
+  load() {
+    console.log(this.sal);
+
+    const headers = { 'content-Type': 'application/json' };
+    this.http.post("http://localhost:8080/salarysave", JSON.stringify(this.sal), { headers: headers })
+      .subscribe(data => {
+        console.log(data);
+
+      })
+
+  }
+
+
   calculatAbsence() {
     this.sal.absenceday = (this.sal.stdays - this.sal.workingday);
 
   }
 
   calulateAbsenceTaka() {
-    this.sal.absence = this.sal.absenceday * (this.sal.basic / 31);
+    this.sal.absence = this.sal.absenceday * (this.sal.basic / 30);
 
   }
   grossEarn() {
@@ -50,6 +63,17 @@ export class SalaryComponent implements OnInit {
   netSalary() {
     this.sal.netsalary = this.sal.grossearn-this.sal.grossdedaction;
   }
-
+  
+  onPrint() {
+    this.save()
+    console.log(this.sal.departnent);
+    let printContents = document.getElementById("pdf")!.innerHTML;
+    let originalContents = document.body.innerHTML;
+    // document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+    console.log(this.sal.departnent + "ujfhugh");
+  }
+  
 
 }

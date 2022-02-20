@@ -15,14 +15,14 @@
             </h1>
             </div>
                <div>
-               <label for="">enter your password </label>
+               <label for="password">enter your password </label>
                </div>
                <div>
-               <input type="password">
+               <input type ="password" name="password" [(ngModel)]="att.password">
               </div> 
               <div>           
-              <button type="button" class="btn btn-info mt-3" data-toggle="modal" data-target="#myModal">login</button>
-              <button type="button" class="btn btn-info mt-3 ml-8" data-toggle="modal" data-target="#myModal">logout</button>
+              <button type="submit" class="btn btn-info mt-3" >login</button>
+              <button type="button" class="btn btn-info mt-3 ml-8">logout</button>
              
             </div>
            
@@ -30,47 +30,46 @@
            
               <div class="container mt-4">
               <div class="">
-              <form action="">
+              <form (ngSubmit)="attendanceSave()">
                 <div class="container justify-content-center">
                     <img src="{emp.imagesUri}" alt="">
                 </div>
 
                 <div >
                  
-                  <label for="">Id Card No :</label>
-                  <input type="number" class="ml-2">
-                  <label for="" class="ml-2">Date :</label>
-                  <input type="date" class="ml-2">
+                  <label for="id">Id Card No :</label>
+                  <input name="id" id="id" [(ngModel)]="att.id" type="number" class="ml-2">
+                  <label for="wdate" class="ml-2">Date :</label>
+                  <input type="date" class="ml-2"  name="wdate" [(ngModel)]="att.id" >
                 </div>
                 <div class="mt-4">
-                <label for="">First Name  :</label>
-                <input type="text" class="ml-2">
-                <label for="" class="ml-4">Last Name  :</label>
-                <input type="text" class="ml-2">
-                <label for="" class="ml-4">Mobile  :</label>
-                <input type="number" class="ml-2">
+                <label for="fname">First Name  :</label>
+                <input type="text" class="ml-2"  name="fname" [(ngModel)]="att.fname">
+                <label for="lname" class="ml-4">Last Name  :</label>
+                <input type="text" class="ml-2" name="lname" [(ngModel)]="att.lname">
+                <label for="phone" class="ml-4">Mobile  :</label>
+                <input type="number" class="ml-2" name="phone" [(ngModel)]="att.phone">
               </div>
-              
+             
               <div class="mt-4">
-                <label for="">InTime :</label>
-                <input type="time" class="ml-2">
-                <label for="" class="ml-4">OutTime :</label>
+                <label for="intime">InTime :</label>
+                <input type="time" class="ml-2" name="intime" [(ngModel)]="att.intime">
+                <label for="outtime" class="ml-4">OutTime :</label>
                
-                <input type="time" class="ml-2">
+                <input type="time" class="ml-2" name="outtime" [(ngModel)]="att.outtime">
                 <label for="" class="ml-4">Working Hour  :</label>
-                <input type="number" class="ml-2">
+                <input type="number" class="ml-2" name="fname" [(ngModel)]="att.fname">
                 </div>
                 <div class="mt-3">
-                <label for="" class="ml-2">Late :</label>
-                <input type="checkbox" class="ml-2" value="Late">
-                <label for="" class="ml-4">Leave :</label>
-                <input type="checkbox" class="ml-2" value="Leave">
-                <label for="" class="ml-4">Absence :</label>
-                <input type="checkbox" class="ml-2" value="Absence">
-                <label for="" class="ml-4">Preasent :</label>
-                <input type="checkbox" class="ml-2" value="Preasent">
+                <label for="atlate" class="ml-2">Late :</label>
+                <input type="checkbox" class="ml-2"  name="atlate" [(ngModel)]="att.atlate">
+                <label for="atleave" class="ml-4">Leave :</label>
+                <input type="checkbox" class="ml-2"  name="atleave"[(ngModel)]="att.atleave"/>
+                <label for="atabsence" class="ml-4">Absence :</label>
+                <input type="checkbox" class="ml-2"  name="atabsence"[(ngModel)]="att.atabsence"/>
+               
               </div>
-          
+              <button type="submit">submit</button>
               </form>
             </div>
             </div>

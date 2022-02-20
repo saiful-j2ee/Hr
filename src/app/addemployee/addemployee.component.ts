@@ -49,7 +49,7 @@ export class AddemployeeComponent implements OnInit {
   save(){
     this.submitted = true;
 
-    debugger;
+    // debugger;
     const formData: FormData = new FormData();
     // formData.append('id', this.ep['id'].toString());
     formData.append('designation',this.ep.designation);
